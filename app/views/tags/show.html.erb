@@ -1,7 +1,16 @@
-<h1>Posts tagged with "<%= @tag.name %>"</h1>
+<h1>Posts con la etiqueta "<%= @tag.name %>"</h1>
 <br>
 <ul>
     <% @tag.posts.each do |post| %>
         <li><%= link_to post.title, post_path(post) %></li>
+        <%= sanitize post.body.to_s.slice(34..134) + "..." %>
     <% end %>
 </ul>
+
+
+
+<h2 class="text-muted">Todas las etiquetas</h2>
+
+<% @tags.each do |tag| %>
+    <%= link_to tag.name, tag_path(tag), class: "btn btn-outline-light me-2" %>
+<% end %>

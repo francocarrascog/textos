@@ -15,6 +15,10 @@
  *= require_self
  */
 
+body {
+  background-color: #ffa8a9;
+}
+
 .link-dark {
   color: black;
 }
@@ -27,4 +31,11 @@
   border-radius: 0.5rem;
   border-style: solid;
   border-color: lightgray;
+  background-color: rgb(255, 232, 232);
+}
+
+hr {
+  color: white;
+  border-width: 0.01em;
+  border-color: rgb(255, 182, 182);
 }

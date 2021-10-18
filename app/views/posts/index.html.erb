@@ -5,8 +5,8 @@
 <div class="card" style="width: 100%;">
   <div class="card-body">
     <h5 class="card-title"><%= post.title %></h5>
-    <p class="card-text"><%= post.body %></p>
-    <a href=""><%= link_to 'Show', post, class: "btn btn-warning" %></a>
+    <p class="card-text"><%= sanitize post.body.to_s.slice(34..134) + "..." %></p>
+    <a href=""><%= link_to 'Show', post, class: "btn btn-info" %></a>
   </div>
 </div>
 <br>

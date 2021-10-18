@@ -2,6 +2,13 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-body {
-  background-color: #fff5e5;
+.card {
+  border-style: dotted;
+  border-width: 1rem;
+  border-color: #ffa8a9;
+  background-color: #ffcec4;
+}
+
+trix-editor.input {
+  background-color: rgb(255, 221, 221);
 }
