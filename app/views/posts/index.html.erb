@@ -2,14 +2,18 @@
 <h1>Posts</h1>
 <br>
 <% @posts.each do |post| %>
-<div class="card" style="width: 100%;">
-  <div class="card-body">
-    <h5 class="card-title"><%= post.title %></h5>
-    <p class="card-text"><%= sanitize post.body.to_s.slice(34..134) + "..." %></p>
-    <a href=""><%= link_to 'Show', post, class: "btn btn-info" %></a>
+
+  <div class="card" style="width: 75%">
+    <div class="card-body">
+      <h5 class="card-title"><%= post.title %></h5>
+      <p class="card-text"><%= sanitize post.body.to_s.slice(34..114) + "..." %></p>
+      <a href=""><%= link_to 'Show', post, class: "btn btn-info" %></a>
+    </div>
   </div>
-</div>
+
+
 <br>
 <% end %>
+
 <br>
 <%= link_to 'New Post', new_post_path, class: "btn btn-dark" %>
